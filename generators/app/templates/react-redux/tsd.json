@@ -1,0 +1,30 @@
+{
+  "version": "v4",
+  "repo": "borisyankov/DefinitelyTyped",
+  "ref": "master",
+  "path": "typings",
+  "bundle": "typings/tsd.d.ts",
+  "installed": {
+    "react/react.d.ts": {
+      "commit": "e95958ac847d9a343bdc8d7cbc796a5f6da29f71"
+    },
+    "node/node.d.ts": {
+      "commit": "e95958ac847d9a343bdc8d7cbc796a5f6da29f71"
+    },
+    "react/react-addons.d.ts": {
+      "commit": "5109e1269d6ab8e8e73b1a5e85d8ceb836d3099f"
+    },
+    "redux/redux.d.ts": {
+      "commit": "67605e10f6eb01c9d4a0d13719d804d6dea9e1cb"
+    },
+    "object-assign/object-assign.d.ts": {
+      "commit": "54f064352a3615443f7bff4198078db15e28247b"
+    },
+    "classnames/classnames.d.ts": {
+      "commit": "30387ec3dd6eb426cc48522fd3aef09ada83aa48"
+    },
+    "jasmine/jasmine.d.ts": {
+      "commit": "3a6e1b8988eba0ba74fe4db20c950242552857e2"
+    }
+  }
+}
