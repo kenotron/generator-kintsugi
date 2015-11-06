@@ -4,7 +4,11 @@ var webpack = require('webpack');
 var nodePath = __dirname + path.sep + "node_modules";
 
 function resolveRelative(relativePath) {
-    return path.resolve(process.env["INETROOT"], 'target/dev/owa/clientnext/debug/amd64', relativePath);
+    if (process.env.NODE_PATH) {
+        return path.resolve(process.env.NODE_PATH, "..", relativePath);
+    } else {
+        return path.resolve(__dirname, relativePath);
+    }
 }
 
 module.exports = {
@@ -13,14 +17,14 @@ module.exports = {
   entry: [
         'webpack-dev-server/client?http://localhost:3000', // WebpackDevServer host and port
         'webpack/hot/only-dev-server',
-        resolveRelative('packages/owa-application/dist/index')
+        resolveRelative('packages/<%= appname %>/dist/index')
   ],
 
   output: {
-    path: resolveRelative("objd/amd64"),
-    filename: 'owa.client.next.js',
+    path: resolveRelative("dist"),
+    filename: '<%= appname %>.js',
     publicPath: "http://localhost:3000/",
-    library: "OwaNext"
+    library: "<%= appname %>"
   },
 
   plugins: [

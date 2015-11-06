@@ -13,12 +13,12 @@ function resolveRelative(relativePath) {
 
 module.exports = {
   entry: [
-        resolveRelative('packages/owa-application/dist/index')
+        resolveRelative('packages/<%= appname %>/dist/index')
   ],
 
   output: {
-    filename: 'owa.client.next.js',
-    library: "OwaNext"
+    filename: '<%= appname %>.js',
+    library: "<%= appname %>"
   },
 
   resolve: {
