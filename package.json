@@ -1,6 +1,6 @@
 {
   "name": "generator-kintsugi",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -16,7 +16,9 @@
     "url": "https://github.com/kenotron/generator-kintsugi-react-redux/issues"
   },
   "homepage": "https://github.com/kenotron/generator-kintsugi-react-redux#readme",
-  "keywords": ["yeoman-generator"],
+  "keywords": [
+    "yeoman-generator"
+  ],
   "dependencies": {
     "yeoman-generator": "^0.21.1",
     "mkdirp": "^0.5.1"
