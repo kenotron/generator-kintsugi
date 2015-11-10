@@ -17,10 +17,10 @@ module.exports = generators.Base.extend({
 		checkExistingProject: function () {
 			if (this.appname) {
 				this.destinationRoot(path.join("packages", this.appname));
-			}
-			
-			if (fs.existsSync(this.destinationPath('package.json'))) {
-				this.isExistingProject = true;
+				
+				if (fs.existsSync(this.destinationPath('package.json'))) {
+					this.isExistingProject = true;
+				}
 			}
 		}
 	},
