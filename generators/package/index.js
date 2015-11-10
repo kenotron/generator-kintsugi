@@ -16,7 +16,7 @@ module.exports = generators.Base.extend({
 	initializing: {
 		checkExistingProject: function () {
 			if (this.appname) {
-				this.destinationRoot(this.appname);
+				this.destinationRoot(path.join("packages", this.appname));
 			}
 			
 			if (fs.existsSync(this.destinationPath('package.json'))) {
@@ -54,7 +54,7 @@ module.exports = generators.Base.extend({
 				this.prompt(prompts, function (answers) {
 					if (answers.appname) {
 						this.appname = answers.appname;
-						this.destinationRoot(this.appname);
+						this.destinationRoot(path.join("packages", this.appname));
 					}
 					
 					if (answers.stack) {
@@ -82,16 +82,10 @@ module.exports = generators.Base.extend({
 				this.destinationPath('./'),
 				this
 			);
-			
-			mkdirp(this.destinationPath('packages'));
 		}
 	},
 
 	install: function() {
-		this.installDependencies({
-			npm: true,
-			bower: false
-		});
 	},
 		
 	end: {
