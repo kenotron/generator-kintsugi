@@ -86,11 +86,30 @@ module.exports = generators.Base.extend({
 	},
 
 	install: function() {
+		console.log(`Installing NPM in ${this.destinationPath('../../node_modules')}`);
+		var packageJson = JSON.parse(fs.readFileSync(this.templatePath("package.json")).toString());
+		
+		var deps = [];
+		
+		// TODO: not quite right - the versions are pegged at latest if we do this
+		if (packageJson.dependencies) {
+			deps = deps.concat(Object.keys(packageJson.dependencies));
+		}
+		
+		if (packageJson.devDependencies) {
+			deps = deps.concat(Object.keys(packageJson.devDependencies));
+		}
+		
+		console.log(deps);
+		
+		console.log("Installing these dependencies: ", deps.join(" "));
+		
+		this.npmInstall(deps, {"prefix": this.destinationPath('../../'), "ignore-scripts": true});
 	},
 		
 	end: {
 		showNextSteps: function() {
-						
+			
 		}
 	}	
 });

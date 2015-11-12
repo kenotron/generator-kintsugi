@@ -30,6 +30,9 @@
     "toposort": "^0.2.12",
     "webpack": "^1.12.3",
     "webpack-dev-server": "^1.12.1",
-    "kintsugi-build": "^0.0.1"
+    "kintsugi-build": "^0.0.2"
+  },
+  "scripts": {
+    "env": "call \"%VS120COMNTOOLS%\"\\vsvars32.bat"
   }
 }

@@ -23,7 +23,7 @@
     "typescript": "^1.8.0-dev.20151028",
     "webpack": "^1.11.0",
     "webpack-dev-server": "^1.10.1",
-    "kintsugi-build": "^0.0.1"
+    "kintsugi-build": "^0.0.2"
   },
   "dependencies": {
     "classnames": "^2.1.3",
